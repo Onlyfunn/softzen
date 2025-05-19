@@ -501,7 +501,7 @@ div[class*=__container] {
   transform: none;
   filter: none;
 }
-.examples__button:nth-child(1):hover {
+.examples__button:nth-child(1)._grey {
   background-color: var(--button-2-grey-color);
   color: var(--button-2-grey-text-color);
 }

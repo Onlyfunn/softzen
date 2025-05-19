@@ -605,11 +605,9 @@ div[class*="__container"] {
       -webkit-filter: none;
       filter: none;
     }
-    &:nth-child(1) {
-      &:hover {
-        background-color: var(--button-2-grey-color);
-        color: var(--button-2-grey-text-color);
-      }
+    &:nth-child(1)._grey {
+      background-color: var(--button-2-grey-color);
+      color: var(--button-2-grey-text-color);
     }
     &:nth-child(2) {
       background-color: var(--button-2-grey-color);

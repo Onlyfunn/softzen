@@ -49,3 +49,11 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
+
+const examplesButtons = document.querySelector(".examples__buttons");
+examplesButtons.children[1].addEventListener("mouseenter", function (e) {
+  examplesButtons.children[0].classList.add("_grey");
+});
+examplesButtons.children[1].addEventListener("mouseleave", function (e) {
+  examplesButtons.children[0].classList.remove("_grey");
+});
