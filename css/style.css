@@ -106,6 +106,7 @@ div[class*=__container] {
 }
 .button__arrow path {
   stroke: var(--button-arrow-color);
+  transition: all 0.3s ease;
 }
 .button:hover {
   transform: scale(0.95);
@@ -486,13 +487,28 @@ div[class*=__container] {
 .examples__button {
   margin-top: 60px;
 }
+.examples__button:hover {
+  transform: none;
+  filter: none;
+}
+.examples__button:nth-child(1):hover {
+  background-color: var(--button-2-grey-color);
+  color: var(--button-2-grey-text-color);
+}
 .examples__button:nth-child(2) {
   background-color: var(--button-2-grey-color);
   color: var(--button-2-grey-text-color);
   padding: 0px 22px;
 }
+.examples__button:nth-child(2):hover {
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+}
 .examples__button:nth-child(2):hover .button__arrow {
   transform: none;
+}
+.examples__button:nth-child(2):hover svg > path {
+  stroke: var(--button-color);
 }
 .examples__button:nth-child(2) svg {
   margin-left: 13px;
@@ -525,9 +541,9 @@ div[class*=__container] {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
   transition: all 0.3s ease;
 }
 .slide-example__text {
