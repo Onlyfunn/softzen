@@ -19,6 +19,7 @@ body.light-theme {
   --icon-bg-color: #f5f6f8;
   --button-shadow: 44, 199, 138;
   --contrast-color: #000;
+  --contrast-reverse-color: #fff;
 }
 
 body.dark-theme {
@@ -38,6 +39,7 @@ body.dark-theme {
   --icon-bg-color: #262626;
   --button-shadow: 44, 199, 138;
   --contrast-color: #fff;
+  --contrast-reverse-color: #000;
 }
 
 /*======================================================
@@ -292,6 +294,12 @@ div[class*=__container] {
   transform: scale(0.95);
   filter: brightness(93%);
 }
+.block-services:hover .block-services__image {
+  background-color: var(--button-2-color);
+}
+.block-services:hover .block-services__image svg > path {
+  stroke: var(--contrast-reverse-color);
+}
 .block-services__image {
   width: 60px;
   height: 60px;
@@ -301,9 +309,11 @@ div[class*=__container] {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 .block-services__image svg path {
   stroke: var(--contrast-color);
+  transition: all 0.3s ease;
 }
 .block-services__title {
   font-weight: 600;
