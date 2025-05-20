@@ -19,6 +19,7 @@ const mainSlider = new Swiper(".main-info__swiper", {
 
 const examplesSlider = new Swiper(".examples__swiper", {
   loop: false,
+
   direction: "horizontal",
   slidesPerView: 3,
   spaceBetween: 21,
@@ -26,8 +27,8 @@ const examplesSlider = new Swiper(".examples__swiper", {
   autoplay: {
     delay: 1000,
     disableOnInteraction: true,
+    reverseDirection: false,
   },
-
   pagination: {
     el: ".examples__swiper-pagination",
     clickable: true,
@@ -36,13 +37,28 @@ const examplesSlider = new Swiper(".examples__swiper", {
     prevEl: ".examples__swiper-button-prev",
     nextEl: ".examples__swiper-button-next",
   },
+  on: {
+    init: function () {
+      this.autoplayReverse = false;
+    },
+    reachEnd: function () {
+      this.params.autoplay.reverseDirection = true;
+      this.autoplay.start();
+      this.autoplayReverse = true;
+    },
+    reachBeginning: function () {
+      this.params.autoplay.reverseDirection = false;
+      this.autoplay.start();
+      this.autoplayReverse = false;
+    },
+  },
 });
 
 const reportsSlider = new Swiper(".reports__swiper", {
   loop: false,
   direction: "horizontal",
   freeMode: true,
-  slidesPerView: 2.5,
+  slidesPerView: 2.62,
   spaceBetween: 21,
 });
 

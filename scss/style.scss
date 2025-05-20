@@ -725,15 +725,16 @@ div[class*="__container"] {
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--bg-color-2);
+  transition: all 0.3s ease;
   &:last-child {
     .block-solution__image {
       height: 100%;
     }
   }
-  &:not(:last-child):hover {
-    .block-solution__image {
-      transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(0.95);
+    -webkit-filter: brightness(93%);
+    filter: brightness(93%);
   }
   &__image {
     width: 100%;
@@ -882,6 +883,7 @@ div[class*="__container"] {
 .reports {
   padding: 130px 0;
   background-color: var(--bg-color-2);
+  overflow: hidden;
 
   &__container {
   }
@@ -901,7 +903,9 @@ div[class*="__container"] {
 .blocks-reports {
   cursor: pointer;
   display: flex;
+  align-items: stretch;
   &__block {
+    height: auto;
     width: 444px !important;
     display: flex;
     flex-direction: column;

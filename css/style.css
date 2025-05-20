@@ -598,12 +598,14 @@ div[class*=__container] {
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--bg-color-2);
+  transition: all 0.3s ease;
 }
 .block-solution:last-child .block-solution__image {
   height: 100%;
 }
-.block-solution:not(:last-child):hover .block-solution__image {
-  transform: scale(1.1);
+.block-solution:hover {
+  transform: scale(0.95);
+  filter: brightness(93%);
 }
 .block-solution__image {
   width: 100%;
@@ -727,6 +729,7 @@ div[class*=__container] {
 .reports {
   padding: 130px 0;
   background-color: var(--bg-color-2);
+  overflow: hidden;
 }
 .reports__title {
   margin-bottom: 60px;
@@ -737,8 +740,10 @@ div[class*=__container] {
 .blocks-reports {
   cursor: pointer;
   display: flex;
+  align-items: stretch;
 }
 .blocks-reports__block {
+  height: auto;
   width: 444px !important;
   display: flex;
   flex-direction: column;
