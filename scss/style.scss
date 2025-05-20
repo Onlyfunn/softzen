@@ -738,7 +738,9 @@ div[class*="__container"] {
   &__image {
     width: 100%;
     height: 216.54px;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center center;
     object-position: center center;
     transition: all 0.3s ease;
   }
@@ -781,7 +783,6 @@ div[class*="__container"] {
 ======================================================*/
 
 .prices {
-  padding: 130px 0;
   &__container {
   }
 
@@ -871,5 +872,91 @@ div[class*="__container"] {
     line-height: 160%;
     font-weight: 500;
     color: #757575;
+  }
+}
+
+/*======================================================
+======================REPORTS===========================
+======================================================*/
+
+.reports {
+  padding: 130px 0;
+  background-color: var(--bg-color-2);
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__swiper {
+    overflow: visible !important;
+  }
+
+  &__blocks {
+  }
+}
+
+.blocks-reports {
+  cursor: pointer;
+  display: flex;
+  &__block {
+    width: 444px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: var(--bg-color-main);
+  }
+
+  &__header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__image {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__name {
+    color: var(--title-color);
+    line-height: 135%;
+  }
+
+  &__info {
+    font-size: 16px;
+    line-height: 135%;
+    color: var(--button-2-color);
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--grey-color);
+    line-height: 135%;
   }
 }

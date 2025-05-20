@@ -38,6 +38,14 @@ const examplesSlider = new Swiper(".examples__swiper", {
   },
 });
 
+const reportsSlider = new Swiper(".reports__swiper", {
+  loop: false,
+  direction: "horizontal",
+  freeMode: true,
+  slidesPerView: 2.5,
+  spaceBetween: 21,
+});
+
 document.addEventListener("keydown", function (e) {
   if (e.code == "KeyT") {
     if (document.body.classList.contains("light-theme")) {
