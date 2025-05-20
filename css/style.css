@@ -6,6 +6,10 @@
   font-family: "TinkoffSans-Medium";
   src: url("../fonts/TinkoffSans-Medium.woff2") format("woff2"), url("../fonts/TinkoffSans-Medium.woff") format("woff");
 }
+@font-face {
+  font-family: "neueRegular";
+  src: url("../fonts/neuehaasunicaw1g-regular.woff") format("woff");
+}
 /*======================================================
 ============ПЕРЕМЕННЫЕ ЦВЕТА============================
 ======================================================*/
@@ -642,7 +646,7 @@ div[class*=__container] {
 .prices {
   padding: 130px 0;
 }
-.prices__container {
+.prices__body {
   border-radius: 30px;
   background-color: var(--bg-color-2);
   padding: 61px 89px;
@@ -653,6 +657,7 @@ div[class*=__container] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 0 1 469px;
 }
 .prices__title {
   font-weight: 600;
@@ -660,14 +665,44 @@ div[class*=__container] {
   line-height: 120%;
   color: var(--contrast-color);
 }
+.prices__right {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 9px 0;
+}
+.prices__right tbody {
+  width: 100%;
+}
+.prices__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prices__row:not(:last-child) {
+  margin-bottom: 30px;
+}
+.prices__name {
+  font-size: 20px;
+  line-height: 135%;
+  color: var(--grey-color);
+}
+.prices__price {
+  line-height: 135%;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--contrast-color);
+}
+
 .credit-prices {
-  display: block;
+  display: flex;
   border-radius: 21px;
   background-color: var(--bg-color-main);
   padding: 19.59px 25.71px;
+  height: 99px;
+  width: 100%;
 }
 .credit-prices__image {
-  height: 100%;
+  padding-right: 9px;
 }
 .credit-prices__inner {
   display: flex;
@@ -676,6 +711,15 @@ div[class*=__container] {
 }
 .credit-prices__title {
   font-family: "TinkoffSans-Medium", sans-serif;
-  font-size: 21px;
-  line-height: 114.2857142857%;
+  font-size: 23px;
+  line-height: 160%;
+  font-weight: 500;
+  color: #333;
+}
+.credit-prices__text {
+  font-family: "neueRegular", sans-serif;
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: 500;
+  color: #757575;
 }

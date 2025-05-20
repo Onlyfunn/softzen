@@ -9,6 +9,11 @@
     url("../fonts/TinkoffSans-Medium.woff") format("woff");
 }
 
+@font-face {
+  font-family: "neueRegular";
+  src: url("../fonts/neuehaasunicaw1g-regular.woff") format("woff");
+}
+
 /*======================================================
 ============ПЕРЕМЕННЫЕ ЦВЕТА============================
 ======================================================*/
@@ -778,6 +783,9 @@ div[class*="__container"] {
 .prices {
   padding: 130px 0;
   &__container {
+  }
+
+  &__body {
     border-radius: 30px;
     background-color: var(--bg-color-2);
     padding: 61px 89px;
@@ -789,6 +797,7 @@ div[class*="__container"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 0 1 469px;
   }
 
   &__title {
@@ -802,22 +811,44 @@ div[class*="__container"] {
   }
 
   &__right {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 9px 0;
+    tbody {
+      width: 100%;
+    }
   }
-
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
   &__name {
+    font-size: 20px;
+    line-height: 135%;
+    color: var(--grey-color);
   }
 
   &__price {
+    line-height: 135%;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--contrast-color);
   }
 }
 
 .credit-prices {
-  display: block;
+  display: flex;
   border-radius: 21px;
   background-color: var(--bg-color-main);
   padding: 19.59px 25.71px;
+  height: 99px;
+  width: 100%;
   &__image {
-    height: 100%;
+    padding-right: 9px;
   }
 
   &__inner {
@@ -828,14 +859,17 @@ div[class*="__container"] {
 
   &__title {
     font-family: "TinkoffSans-Medium", sans-serif;
-    font-size: 21px;
-    line-height: calc(24 / 21 * 100%);
+    font-size: 23px;
+    line-height: 160%;
+    font-weight: 500;
+    color: #333;
   }
 
   &__text {
-  }
-}
-.price {
-  &__row {
+    font-family: "neueRegular", sans-serif;
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: 500;
+    color: #757575;
   }
 }
