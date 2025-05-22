@@ -136,9 +136,6 @@ div[class*="__container"] {
     transform: scale(0.95);
     -webkit-filter: brightness(95%);
     filter: brightness(95%);
-    .button__arrow {
-      transform: translateX(10px);
-    }
   }
 }
 
@@ -258,6 +255,11 @@ div[class*="__container"] {
   gap: 31px;
   &__button {
     min-width: 273px;
+    &:hover {
+      .button__arrow {
+        transform: translateX(10px);
+      }
+    }
   }
   &__text {
     display: flex;

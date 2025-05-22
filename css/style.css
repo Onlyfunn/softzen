@@ -135,9 +135,6 @@ div[class*=__container] {
   transform: scale(0.95);
   filter: brightness(95%);
 }
-.button:hover .button__arrow {
-  transform: translateX(10px);
-}
 
 .title {
   font-size: 50px;
@@ -237,6 +234,9 @@ div[class*=__container] {
 }
 .contact-info__button {
   min-width: 273px;
+}
+.contact-info__button:hover .button__arrow {
+  transform: translateX(10px);
 }
 .contact-info__text {
   display: flex;
