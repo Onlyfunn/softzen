@@ -1,5 +1,74 @@
 new WOW().init();
 
+/*======================================================
+======================SPOILERS==========================
+======================================================*/
+
+function slideToggle(element, duration = 400) {
+  const isHidden = window.getComputedStyle(element).display === "none";
+
+  // Показываем элемент временно для измерения высоты
+  element.style.display = "block";
+  const fullHeight = element.offsetHeight;
+  element.style.display = isHidden ? "none" : "block";
+
+  // Применяем overflow: hidden только к родителю, не к медиа-элементам
+  element.style.overflow = "hidden";
+
+  // Исключаем медиа-элементы из обработки overflow
+  const mediaElements = element.querySelectorAll("img, video, canvas");
+  mediaElements.forEach((el) => {
+    el.style.overflow = "clip"; // или 'hidden'
+  });
+
+  element.style.transition = `height ${duration}ms ease`;
+
+  if (isHidden) {
+    element.style.display = "block";
+    element.style.height = "0";
+    requestAnimationFrame(() => {
+      element.style.height = `${fullHeight}px`;
+    });
+  } else {
+    element.style.height = `${fullHeight}px`;
+    requestAnimationFrame(() => {
+      element.style.height = "0";
+    });
+  }
+
+  const handleTransitionEnd = () => {
+    element.style.transition = "";
+    element.style.overflow = "";
+    element.style.height = "";
+
+    // Восстанавливаем overflow для медиа-элементов
+    mediaElements.forEach((el) => {
+      el.style.overflow = "";
+    });
+
+    if (!isHidden) {
+      element.style.display = "none";
+    }
+    element.removeEventListener("transitionend", handleTransitionEnd);
+  };
+
+  element.addEventListener("transitionend", handleTransitionEnd);
+}
+
+const spoilers = document.querySelectorAll(".spoiler-title");
+if (spoilers) {
+  spoilers.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      slideToggle(item.nextElementSibling, 300);
+      item.children[1].classList.toggle("_active");
+    });
+  });
+}
+
+/*======================================================
+======================MAIN SLIDER=======================
+======================================================*/
+
 const mainSlider = new Swiper(".main-info__swiper", {
   loop: true,
   direction: "horizontal",
@@ -16,6 +85,10 @@ const mainSlider = new Swiper(".main-info__swiper", {
     clickable: true,
   },
 });
+
+/*======================================================
+======================EXAMPLES SLIDER==================
+======================================================*/
 
 const examplesSlider = new Swiper(".examples__swiper", {
   loop: false,
@@ -37,6 +110,7 @@ const examplesSlider = new Swiper(".examples__swiper", {
     prevEl: ".examples__swiper-button-prev",
     nextEl: ".examples__swiper-button-next",
   },
+  //AUTOPLAY REVERSE
   on: {
     init: function () {
       this.autoplayReverse = false;
@@ -54,6 +128,10 @@ const examplesSlider = new Swiper(".examples__swiper", {
   },
 });
 
+/*======================================================
+======================REPORTS SLIDER====================
+======================================================*/
+
 const reportsSlider = new Swiper(".reports__swiper", {
   loop: false,
   direction: "horizontal",
@@ -61,6 +139,10 @@ const reportsSlider = new Swiper(".reports__swiper", {
   slidesPerView: 2.62,
   spaceBetween: 21,
 });
+
+/*======================================================
+======================CHANGE THEME======================
+======================================================*/
 
 document.addEventListener("keydown", function (e) {
   if (e.code == "KeyT") {
@@ -74,10 +156,16 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+/*======================================================
+===============EXAMPLES BUTTONS ANIMATION===============
+======================================================*/
+
 const examplesButtons = document.querySelector(".examples__buttons");
-examplesButtons.children[1].addEventListener("mouseenter", function (e) {
-  examplesButtons.children[0].classList.add("_grey");
-});
-examplesButtons.children[1].addEventListener("mouseleave", function (e) {
-  examplesButtons.children[0].classList.remove("_grey");
-});
+if (examplesButtons) {
+  examplesButtons.children[1].addEventListener("mouseenter", function (e) {
+    examplesButtons.children[0].classList.add("_grey");
+  });
+  examplesButtons.children[1].addEventListener("mouseleave", function (e) {
+    examplesButtons.children[0].classList.remove("_grey");
+  });
+}
