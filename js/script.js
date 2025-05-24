@@ -169,3 +169,28 @@ if (examplesButtons) {
     examplesButtons.children[0].classList.remove("_grey");
   });
 }
+
+/*======================================================
+===============RESPONSIVE MAIN SLIDER===================
+======================================================*/
+
+const mainText = document.querySelector(".main-info__text");
+const mainSliderObject = document.querySelector(".main-info__swiper");
+
+if (mainText && mainSliderObject) {
+  if (document.documentElement.clientWidth <= 798) {
+    mainText.style.marginBottom = `${
+      mainSliderObject.getBoundingClientRect().height * 0.82
+    }px`;
+  }
+
+  window.addEventListener("resize", function (e) {
+    if (document.documentElement.clientWidth <= 798) {
+      mainText.style.marginBottom = `${
+        mainSliderObject.getBoundingClientRect().height * 0.82
+      }px`;
+    } else {
+      mainText.style.marginBottom = `0px`;
+    }
+  });
+}

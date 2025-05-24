@@ -76,11 +76,13 @@ body {
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
   font-size: 27px;
+  @media (max-width: 1231px) {
+    font-size: 20px;
+  }
   font-weight: 500;
   line-height: 135%;
   color: var(--text-color);
   background-color: var(--bg-color-main);
-  overflow-x: hidden;
   transition: all 0.3s ease;
   span {
     font-weight: 600;
@@ -98,14 +100,20 @@ body {
 }
 
 div[class*="__container"] {
-  max-width: 1230px;
+  max-width: 1231px;
   margin: 0 auto;
   padding: 0px 15px;
-  @media (max-width: 1230px) {
-    max-width: 1054px;
+  @media (max-width: 1231px) {
+    max-width: 1023px;
   }
-  @media (max-width: 1054px) {
-    max-width: 798px;
+  @media (max-width: 1023px) {
+    max-width: 799px;
+  }
+  @media (max-width: 799px) {
+    max-width: 607px;
+  }
+  @media (max-width: 607px) {
+    max-width: none;
   }
 }
 
@@ -122,11 +130,36 @@ div[class*="__container"] {
   color: var(--button-color);
   background-color: #4bb87f;
   transition: all 0.3s ease;
+  @media (max-width: 1231px) {
+    height: 55px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  @media (max-width: 1023px) {
+    height: 45px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+  @media (max-width: 607px) {
+    font-size: 12px;
+    height: 44px;
+    border-radius: 20px;
+  }
   &__arrow {
     width: 24px;
     height: 24px;
     margin-left: 10px;
     transition: all 0.3s ease;
+    @media (max-width: 1231px) {
+      width: 22px;
+      height: 22px;
+      margin-left: 8px;
+    }
+    @media (max-width: 1023px) {
+      width: 18px;
+      height: 18px;
+      margin-left: 6px;
+    }
     path {
       stroke: var(--button-arrow-color);
       transition: all 0.3s ease;
@@ -144,6 +177,18 @@ div[class*="__container"] {
   font-weight: 600;
   color: var(--title-color);
   line-height: 120%;
+  @media (max-width: 1231px) {
+    font-size: 36px;
+  }
+  @media (max-width: 1023px) {
+    font-size: 28px;
+  }
+  @media (max-width: 799px) {
+    font-size: 22px;
+  }
+  @media (max-width: 607px) {
+    font-size: 18px;
+  }
 }
 
 .button-2 {
@@ -182,6 +227,17 @@ div[class*="__container"] {
   border-radius: 0px 0px 50px 50px;
   position: relative;
   background-color: var(--bg-color-main);
+  @media (max-width: 1231px) {
+    border-radius: 0px 0px 30px 30px;
+  }
+  @media (max-width: 799px) {
+    border-radius: 0px;
+  }
+
+  *:not(.main-info__swiper, .main-info__inner, .main-info__swiper-pagination) {
+    position: relative;
+    z-index: 1;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -197,13 +253,36 @@ div[class*="__container"] {
   &__container {
     padding: 97.5px 15px 53px !important;
     position: relative;
+    @media (max-width: 1231px) {
+      padding: 80px 15px 50px !important;
+    }
+    @media (max-width: 1023px) {
+      padding: 60px 15px 40px !important;
+    }
+    @media (max-width: 799px) {
+      padding: 40px 15px 40px !important;
+    }
+    @media (max-width: 607px) {
+      padding: 35px 15px !important;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 588px;
+    max-width: 588px;
+    @media (max-width: 1231px) {
+      max-width: 501px;
+      gap: 30px;
+    }
+    @media (max-width: 1023px) {
+      gap: 25.6px;
+      max-width: 380px;
+    }
+    @media (max-width: 799px) {
+      max-width: none;
+    }
   }
 
   &__title {
@@ -212,14 +291,56 @@ div[class*="__container"] {
   &__text {
     font-size: 20px;
     line-height: 135%;
+    @media (max-width: 1231px) {
+      font-size: 16px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 14px;
+    }
+    @media (max-width: 799px) {
+    }
+    @media (max-width: 607px) {
+      font-size: 12.32px;
+    }
   }
 
   &__swiper {
     position: absolute;
+    z-index: 0;
     top: -32px;
     right: -162px;
     width: 895.39px;
     height: 597px;
+    @media (max-width: 1231px) {
+      height: 500px;
+      width: 770px;
+    }
+    @media (max-width: 1023px) {
+      height: 400px;
+      width: 640px;
+    }
+    @media (max-width: 799px) {
+      height: 435px;
+      width: 660px;
+      top: 135px;
+      right: 0;
+      left: 0;
+    }
+    @media (max-width: 607px) {
+      height: 105vw;
+      width: 158vw;
+      top: 110px;
+      max-height: 435px;
+      max-width: 660px;
+      left: -28vw;
+      right: -28vw;
+    }
+    @media (max-width: 445px) {
+      top: 150px;
+    }
+    @media (max-width: 370px) {
+      top: 170px;
+    }
   }
 
   &__swiper-wrapper {
@@ -239,6 +360,16 @@ div[class*="__container"] {
       margin: 0px 2.5px !important;
       background-color: #ececec;
       opacity: 1;
+      @media (max-width: 1231px) {
+        width: 10px;
+        height: 10px;
+        margin: 0px 2px !important;
+      }
+      @media (max-width: 1023px) {
+        width: 8px;
+        height: 8px;
+        margin: 0px 1.5px !important;
+      }
     }
     .swiper-pagination-bullet-active {
       background-color: var(--button-bg-color);
@@ -253,8 +384,28 @@ div[class*="__container"] {
   display: flex;
   align-items: center;
   gap: 31px;
+  @media (max-width: 1231px) {
+    gap: 25px;
+  }
+  @media (max-width: 1023px) {
+    gap: 19px;
+  }
+  @media (max-width: 607px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__button {
     min-width: 273px;
+    @media (max-width: 1231px) {
+      min-width: 240px;
+    }
+    @media (max-width: 1023px) {
+      min-width: 200px;
+    }
+    @media (max-width: 607px) {
+      min-width: 185px;
+    }
     &:hover {
       .button__arrow {
         transform: translateX(10px);
@@ -266,6 +417,12 @@ div[class*="__container"] {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    @media (max-width: 1231px) {
+      gap: 3px;
+    }
+    @media (max-width: 1023px) {
+      gap: 0px;
+    }
   }
   @-webkit-keyframes green-round {
     0% {
@@ -295,6 +452,10 @@ div[class*="__container"] {
     color: var(--title-color);
     position: relative;
     padding-left: 17px;
+    @media (max-width: 1231px) {
+      font-size: 13px;
+      padding-left: 13px;
+    }
 
     &::before {
       content: "";
@@ -308,12 +469,19 @@ div[class*="__container"] {
       background-color: #32c24c;
       -webkit-animation: green-round 1s ease infinite;
       animation: green-round 1s ease infinite;
+      @media (max-width: 1231px) {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 
   &__text-under {
     font-size: 13px;
     line-height: 135%;
+    @media (max-width: 1231px) {
+      font-size: 10px;
+    }
 
     color: var(--grey-color);
   }
