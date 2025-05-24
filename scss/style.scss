@@ -769,12 +769,35 @@ div[class*="__container"] {
 
 .steps {
   padding: 130px 0;
-
+  @media (max-width: 1231px) {
+    padding: 100px 0;
+  }
+  @media (max-width: 1023px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 799px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 607px) {
+    padding: 40px 0;
+  }
   &__container {
     display: flex;
     gap: 67px;
     height: 100%;
     position: relative;
+    @media (max-width: 1231px) {
+      gap: 40px;
+    }
+    @media (max-width: 1023px) {
+      gap: 30px;
+    }
+    @media (max-width: 799px) {
+      flex-direction: column;
+    }
+    @media (max-width: 607px) {
+      gap: 20px;
+    }
   }
 
   &__texts {
@@ -785,6 +808,20 @@ div[class*="__container"] {
     height: fit-content;
     position: sticky;
     top: 20px;
+    @media (max-width: 1231px) {
+      gap: 20px;
+      flex: 1 0 400px;
+    }
+    @media (max-width: 1023px) {
+      gap: 10px;
+      flex: 1 0 330px;
+    }
+    @media (max-width: 799px) {
+      gap: 5px;
+      flex: 1 0 0;
+    }
+    @media (max-width: 607px) {
+    }
   }
 
   &__title {
@@ -799,6 +836,18 @@ div[class*="__container"] {
     gap: 40px;
     list-style: none;
     counter-reset: step 0;
+    @media (max-width: 1231px) {
+      gap: 30px;
+    }
+    @media (max-width: 1023px) {
+      gap: 20px;
+    }
+    @media (max-width: 799px) {
+      gap: 15px;
+    }
+    @media (max-width: 607px) {
+      gap: 10px;
+    }
   }
 
   &__block {
@@ -813,23 +862,79 @@ div[class*="__container"] {
   counter-increment: step 1;
   position: relative;
   width: calc(50vw + 103px);
+  @media (max-width: 1231px) {
+    padding: 30px 40px;
+    min-height: 0px;
+  }
+  @media (max-width: 1023px) {
+    padding: 20px 30px;
+    width: calc(50vw + 130px);
+  }
+  @media (max-width: 799px) {
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  @media (max-width: 607px) {
+    padding: 15px;
+  }
 
   &:not(:nth-child(2)) {
     .block-step__image {
       top: 51%;
       transform: translateY(-50%);
       right: 0;
+      @media (max-width: 1231px) {
+        transform: translateY(-50%) scale(0.8);
+      }
+      @media (max-width: 1023px) {
+        transform: translateY(-50%) scale(0.5);
+      }
+      @media (max-width: 799px) {
+        transform: translateY(-50%);
+        height: 80%;
+      }
+      @media (max-width: 607px) {
+        display: none;
+      }
     }
   }
   &:last-child {
     .block-step__image {
       right: 35.76px;
+      @media (max-width: 1231px) {
+        right: 50px;
+      }
+      @media (max-width: 1023px) {
+        right: 65px;
+      }
+      @media (max-width: 799px) {
+        right: 20px;
+      }
+      @media (max-width: 607px) {
+      }
     }
   }
   &:nth-child(2) {
     .block-step__image {
       bottom: 0;
       right: 0;
+      @media (max-width: 1231px) {
+        transform: scale(0.8);
+        bottom: -37px;
+      }
+      @media (max-width: 1023px) {
+        transform: scale(0.5);
+        bottom: -92px;
+      }
+      @media (max-width: 799px) {
+        transform: scale(1);
+        height: 80%;
+        bottom: 0;
+      }
+      @media (max-width: 607px) {
+        display: none;
+      }
     }
   }
 
@@ -842,10 +947,37 @@ div[class*="__container"] {
     &::before {
       content: counter(step);
     }
+    @media (max-width: 1231px) {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 799px) {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 607px) {
+      font-size: 20px;
+    }
   }
 
   &__texts {
     max-width: 455px;
+    @media (max-width: 1231px) {
+      max-width: 300px;
+    }
+    @media (max-width: 1023px) {
+      max-width: 260px;
+    }
+    @media (max-width: 799px) {
+      max-width: 320px;
+    }
+    @media (max-width: 607px) {
+      max-width: 420px;
+    }
   }
 
   &__title {
@@ -853,6 +985,16 @@ div[class*="__container"] {
     color: var(--title-color);
     line-height: 120%;
     margin-bottom: 20px;
+    @media (max-width: 1231px) {
+      margin-bottom: 15px;
+    }
+    @media (max-width: 1023px) {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 799px) {
+    }
+    @media (max-width: 607px) {
+    }
   }
 
   &__text {
