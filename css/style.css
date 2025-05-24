@@ -290,6 +290,7 @@ div[class*=__container] {
   font-size: 18px;
   color: var(--step-text-color);
   line-height: 135%;
+  font-weight: 400;
 }
 @media (max-width: 1231px) {
   .grey-text {
@@ -1360,11 +1361,7 @@ div[class*=__container] {
   margin-bottom: 15px;
 }
 .block-solution__text {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--grey-color);
   margin-bottom: 15px;
-  line-height: 135%;
 }
 .block-solution__inner {
   display: flex;
@@ -1527,13 +1524,6 @@ div[class*=__container] {
   line-height: 135%;
   color: var(--button-2-color);
 }
-.blocks-reports__text {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--grey-color);
-  line-height: 135%;
-}
-
 /*======================================================
 ======================QUESTIONS=========================
 ======================================================*/
@@ -1591,10 +1581,8 @@ div[class*=__container] {
   max-width: 76%;
 }
 .spoiler-quetions__text {
-  font-size: 18px;
-  color: var(--grey-color);
-  line-height: 135%;
-  padding-top: 16px;
+  padding-top: 15px;
+  font-weight: 500;
 }
 
 /*======================================================
@@ -1690,10 +1678,4 @@ div[class*=__container] {
   line-height: 135%;
   color: var(--title-color);
   margin-bottom: 20px;
-}
-.info-articles__text {
-  font-size: 18px;
-  color: var(--grey-color);
-  line-height: 135%;
-  font-weight: 400;
 }

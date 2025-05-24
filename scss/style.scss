@@ -256,6 +256,7 @@ div[class*="__container"] {
   font-size: 18px;
   color: var(--step-text-color);
   line-height: 135%;
+  font-weight: 400;
   @media (max-width: 1231px) {
     font-size: 16px;
   }
@@ -1267,11 +1268,7 @@ div[class*="__container"] {
   }
 
   &__text {
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--grey-color);
     margin-bottom: 15px;
-    line-height: 135%;
   }
 
   &__inner {
@@ -1473,10 +1470,6 @@ div[class*="__container"] {
   }
 
   &__text {
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--grey-color);
-    line-height: 135%;
   }
 }
 
@@ -1551,10 +1544,8 @@ div[class*="__container"] {
     max-width: 76%;
   }
   &__text {
-    font-size: 18px;
-    color: var(--grey-color);
-    line-height: 135%;
-    padding-top: 16px;
+    padding-top: 15px;
+    font-weight: 500;
   }
 }
 
@@ -1674,9 +1665,5 @@ div[class*="__container"] {
   }
 
   &__text {
-    font-size: 18px;
-    color: var(--grey-color);
-    line-height: 135%;
-    font-weight: 400;
   }
 }
