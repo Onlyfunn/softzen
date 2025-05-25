@@ -173,14 +173,16 @@ document.addEventListener("keydown", function (e) {
 ===============EXAMPLES BUTTONS ANIMATION===============
 ======================================================*/
 
-const examplesButtons = document.querySelector(".examples__buttons");
-if (examplesButtons) {
-  examplesButtons.children[1].addEventListener("mouseenter", function (e) {
-    examplesButtons.children[0].classList.add("_grey");
-  });
-  examplesButtons.children[1].addEventListener("mouseleave", function (e) {
-    examplesButtons.children[0].classList.remove("_grey");
-  });
+if (document.documentElement.clientWidth > 1024) {
+  const examplesButtons = document.querySelector(".examples__buttons");
+  if (examplesButtons) {
+    examplesButtons.children[1].addEventListener("mouseenter", function (e) {
+      examplesButtons.children[0].classList.add("_grey");
+    });
+    examplesButtons.children[1].addEventListener("mouseleave", function (e) {
+      examplesButtons.children[0].classList.remove("_grey");
+    });
+  }
 }
 
 /*======================================================
