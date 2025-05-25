@@ -1618,6 +1618,27 @@ div[class*="__container"] {
     padding: 61px 89px;
     display: flex;
     gap: 114px;
+    @media (max-width: 1231px) {
+      border-radius: 25px;
+      padding: 50px 70px;
+      gap: 50px;
+    }
+    @media (max-width: 1023px) {
+      border-radius: 20px;
+      padding: 40px 50px;
+      gap: 40px;
+    }
+    @media (max-width: 799px) {
+      border-radius: 10px;
+      padding: 25px 30px;
+      gap: 40px;
+    }
+    @media (max-width: 607px) {
+      border-radius: 10px;
+      padding: 20px 25px;
+      gap: 15px;
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -1625,6 +1646,19 @@ div[class*="__container"] {
     flex-direction: column;
     justify-content: space-between;
     flex: 0 1 469px;
+    @media (max-width: 1231px) {
+      flex: 0 1 410px;
+    }
+    @media (max-width: 1023px) {
+      flex: 0 1 370px;
+    }
+    @media (max-width: 799px) {
+      flex: 0 1 230px;
+    }
+    @media (max-width: 607px) {
+      flex: 0 1 0;
+      gap: 15px;
+    }
   }
 
   &__title {
@@ -1632,6 +1666,18 @@ div[class*="__container"] {
     font-size: 36px;
     line-height: 120%;
     color: var(--contrast-color);
+    @media (max-width: 1231px) {
+      font-size: 32px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 28px;
+    }
+    @media (max-width: 799px) {
+      font-size: 20px;
+    }
+    @media (max-width: 607px) {
+      font-size: 16px;
+    }
   }
 
   &__credit {
@@ -1651,12 +1697,36 @@ div[class*="__container"] {
     justify-content: space-between;
     &:not(:last-child) {
       margin-bottom: 30px;
+      @media (max-width: 1231px) {
+        margin-bottom: 25px;
+      }
+      @media (max-width: 1023px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 799px) {
+        margin-bottom: 15px;
+      }
+      @media (max-width: 607px) {
+        margin-bottom: 10px;
+      }
     }
   }
   &__name {
     font-size: 20px;
     line-height: 135%;
     color: var(--grey-color);
+    @media (max-width: 1231px) {
+      font-size: 17px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 14px;
+    }
+    @media (max-width: 799px) {
+      font-size: 12px;
+    }
+    @media (max-width: 607px) {
+      font-size: 10px;
+    }
   }
 
   &__price {
@@ -1664,6 +1734,18 @@ div[class*="__container"] {
     font-size: 20px;
     font-weight: 700;
     color: var(--contrast-color);
+    @media (max-width: 1231px) {
+      font-size: 17px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 14px;
+    }
+    @media (max-width: 799px) {
+      font-size: 12px;
+    }
+    @media (max-width: 607px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -1676,9 +1758,32 @@ div[class*="__container"] {
   width: 100%;
   &__image {
     padding-right: 9px;
+    height: 100%;
     path#path-num {
       fill: var(--credit-color);
     }
+    @media (max-width: 799px) {
+      width: 45%;
+    }
+  }
+  @media (max-width: 1231px) {
+    border-radius: 16px;
+    padding: 15px 20px;
+    height: 80px;
+  }
+  @media (max-width: 1023px) {
+    border-radius: 14px;
+    padding: 10px 15px;
+    height: 70px;
+  }
+  @media (max-width: 799px) {
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 44px;
+  }
+  @media (max-width: 607px) {
+    height: 40px;
+    width: fit-content;
   }
 
   &__inner {
@@ -1694,6 +1799,18 @@ div[class*="__container"] {
     font-weight: 500;
     color: var(--credit-color);
     opacity: 0.8;
+    @media (max-width: 1231px) {
+      font-size: 17px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 16px;
+    }
+    @media (max-width: 799px) {
+      font-size: 11px;
+    }
+    @media (max-width: 607px) {
+      font-size: 10px;
+    }
   }
 
   &__text {
@@ -1702,6 +1819,17 @@ div[class*="__container"] {
     line-height: 160%;
     font-weight: 500;
     color: var(--credit-2-color);
+    @media (max-width: 1231px) {
+      font-size: 13px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 10px;
+    }
+    @media (max-width: 799px) {
+    }
+    @media (max-width: 607px) {
+      font-size: 9px;
+    }
   }
 }
 

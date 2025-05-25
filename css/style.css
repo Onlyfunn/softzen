@@ -1811,17 +1811,87 @@ div[class*=__container] {
   display: flex;
   gap: 114px;
 }
+@media (max-width: 1231px) {
+  .prices__body {
+    border-radius: 25px;
+    padding: 50px 70px;
+    gap: 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__body {
+    border-radius: 20px;
+    padding: 40px 50px;
+    gap: 40px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__body {
+    border-radius: 10px;
+    padding: 25px 30px;
+    gap: 40px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__body {
+    border-radius: 10px;
+    padding: 20px 25px;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
 .prices__left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 0 1 469px;
 }
+@media (max-width: 1231px) {
+  .prices__left {
+    flex: 0 1 410px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__left {
+    flex: 0 1 370px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__left {
+    flex: 0 1 230px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__left {
+    flex: 0 1 0;
+    gap: 15px;
+  }
+}
 .prices__title {
   font-weight: 600;
   font-size: 36px;
   line-height: 120%;
   color: var(--contrast-color);
+}
+@media (max-width: 1231px) {
+  .prices__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__title {
+    font-size: 16px;
+  }
 }
 .prices__right {
   display: flex;
@@ -1839,16 +1909,76 @@ div[class*=__container] {
 .prices__row:not(:last-child) {
   margin-bottom: 30px;
 }
+@media (max-width: 1231px) {
+  .prices__row:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__row:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__row:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .prices__name {
   font-size: 20px;
   line-height: 135%;
   color: var(--grey-color);
+}
+@media (max-width: 1231px) {
+  .prices__name {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__name {
+    font-size: 14px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__name {
+    font-size: 12px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__name {
+    font-size: 10px;
+  }
 }
 .prices__price {
   line-height: 135%;
   font-size: 20px;
   font-weight: 700;
   color: var(--contrast-color);
+}
+@media (max-width: 1231px) {
+  .prices__price {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1023px) {
+  .prices__price {
+    font-size: 14px;
+  }
+}
+@media (max-width: 799px) {
+  .prices__price {
+    font-size: 12px;
+  }
+}
+@media (max-width: 607px) {
+  .prices__price {
+    font-size: 10px;
+  }
 }
 
 .credit-prices {
@@ -1861,9 +1991,43 @@ div[class*=__container] {
 }
 .credit-prices__image {
   padding-right: 9px;
+  height: 100%;
 }
 .credit-prices__image path#path-num {
   fill: var(--credit-color);
+}
+@media (max-width: 799px) {
+  .credit-prices__image {
+    width: 45%;
+  }
+}
+@media (max-width: 1231px) {
+  .credit-prices {
+    border-radius: 16px;
+    padding: 15px 20px;
+    height: 80px;
+  }
+}
+@media (max-width: 1023px) {
+  .credit-prices {
+    border-radius: 14px;
+    padding: 10px 15px;
+    height: 70px;
+  }
+}
+@media (max-width: 799px) {
+  .credit-prices {
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 44px;
+  }
+}
+@media (max-width: 607px) {
+  .credit-prices {
+    height: 40px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .credit-prices__inner {
   display: flex;
@@ -1878,12 +2042,47 @@ div[class*=__container] {
   color: var(--credit-color);
   opacity: 0.8;
 }
+@media (max-width: 1231px) {
+  .credit-prices__title {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1023px) {
+  .credit-prices__title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 799px) {
+  .credit-prices__title {
+    font-size: 11px;
+  }
+}
+@media (max-width: 607px) {
+  .credit-prices__title {
+    font-size: 10px;
+  }
+}
 .credit-prices__text {
   font-family: "neueRegular", sans-serif;
   font-size: 14px;
   line-height: 160%;
   font-weight: 500;
   color: var(--credit-2-color);
+}
+@media (max-width: 1231px) {
+  .credit-prices__text {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1023px) {
+  .credit-prices__text {
+    font-size: 10px;
+  }
+}
+@media (max-width: 607px) {
+  .credit-prices__text {
+    font-size: 9px;
+  }
 }
 
 /*======================================================
