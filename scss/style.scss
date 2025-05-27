@@ -2040,18 +2040,53 @@ div[class*="__container"] {
 .questions {
   padding-bottom: 130px;
   background-color: var(--bg-color-2);
+  @media (max-width: 1231px) {
+    padding: 100px 0;
+  }
+  @media (max-width: 1023px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 799px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 607px) {
+    padding: 40px 0;
+  }
 
   &__container {
   }
 
   &__title {
     margin-bottom: 60px;
+    @media (max-width: 1231px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 1023px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 799px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 607px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__spoilers {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: 1231px) {
+      gap: 15px;
+    }
+    @media (max-width: 1023px) {
+      gap: 10px;
+    }
+    @media (max-width: 799px) {
+      gap: 8px;
+    }
+    @media (max-width: 607px) {
+    }
   }
 
   &__spoiler {
@@ -2063,10 +2098,40 @@ div[class*="__container"] {
   border-radius: 20px;
   background-color: var(--bg-color-main);
   padding: 20px 30px;
+  @media (max-width: 1231px) {
+    padding: 15px 25px;
+    border-radius: 15px;
+  }
+  @media (max-width: 1023px) {
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  @media (max-width: 799px) {
+    padding: 8px 15px;
+    border-radius: 8px;
+  }
+  @media (max-width: 607px) {
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
 
   &__title {
     font-size: 27px;
     font-weight: 500;
+    max-width: 85%;
+
+    @media (max-width: 1231px) {
+      font-size: 22px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 18px;
+    }
+    @media (max-width: 799px) {
+      font-size: 16px;
+    }
+    @media (max-width: 607px) {
+      font-size: 14px;
+    }
   }
 
   &__header {
@@ -2085,10 +2150,46 @@ div[class*="__container"] {
     align-items: center;
     justify-content: center;
     position: relative;
+    @media (max-width: 1231px) {
+      width: 40px;
+      height: 40px;
+      border-radius: 7px;
+    }
+    @media (max-width: 1023px) {
+      width: 35px;
+      height: 35px;
+      border-radius: 6px;
+    }
+    @media (max-width: 799px) {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+    }
+    @media (max-width: 607px) {
+      width: 25px;
+      height: 25px;
+      border-radius: 4px;
+    }
     svg {
       transition: all 0.3s ease;
       width: 18px;
       height: 18px;
+      @media (max-width: 1231px) {
+        width: 15px;
+        height: 15px;
+      }
+      @media (max-width: 1023px) {
+        width: 13px;
+        height: 13px;
+      }
+      @media (max-width: 799px) {
+        width: 11px;
+        height: 11px;
+      }
+      @media (max-width: 607px) {
+        width: 9px;
+        height: 9px;
+      }
       path {
         fill: var(--contrast-color);
       }
@@ -2102,10 +2203,23 @@ div[class*="__container"] {
   &__inner {
     display: none;
     max-width: 76%;
+    @media (max-width: 1231px) {
+      max-width: 85%;
+    }
   }
   &__text {
     padding-top: 15px;
     font-weight: 500;
+    @media (max-width: 1231px) {
+      padding-top: 10px;
+    }
+    @media (max-width: 1023px) {
+      padding-top: 8px;
+    }
+    @media (max-width: 799px) {
+    }
+    @media (max-width: 607px) {
+    }
   }
 }
 
