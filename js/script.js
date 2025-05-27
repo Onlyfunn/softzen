@@ -64,13 +64,23 @@ window.addEventListener("click", function (e) {
       spoilers.forEach((item) => {
         if (item.children[1].style.display == "block") {
           slideToggle(item.children[1], 300);
+          item.classList.remove("_active");
         }
       });
+      if (
+        e.target.closest(".questions__spoiler").children[1].style.display ==
+        "block"
+      ) {
+        e.target.closest(".questions__spoiler").classList.remove("_active");
+      } else {
+        e.target.closest(".questions__spoiler").classList.add("_active");
+      }
       slideToggle(e.target.closest(".questions__spoiler").children[1], 300);
     } else {
       spoilers.forEach((item) => {
         if (item.children[1].style.display == "block") {
           slideToggle(item.children[1], 300);
+          item.classList.remove("_active");
         }
       });
     }

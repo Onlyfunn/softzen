@@ -2426,6 +2426,9 @@ div[class*=__container] {
     border-radius: 6px;
   }
 }
+.spoiler-quetions._active .spoiler-quetions__plus svg {
+  transform: rotate(-45deg);
+}
 .spoiler-quetions__title {
   font-size: 27px;
   font-weight: 500;
@@ -2526,9 +2529,6 @@ div[class*=__container] {
 }
 .spoiler-quetions__plus svg path {
   fill: var(--contrast-color);
-}
-.spoiler-quetions__plus._active svg {
-  transform: rotate(-45deg);
 }
 .spoiler-quetions__inner {
   display: none;

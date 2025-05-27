@@ -2114,6 +2114,13 @@ div[class*="__container"] {
     padding: 6px 12px;
     border-radius: 6px;
   }
+  &._active {
+    .spoiler-quetions__plus {
+      svg {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 
   &__title {
     font-size: 27px;
@@ -2192,11 +2199,6 @@ div[class*="__container"] {
       }
       path {
         fill: var(--contrast-color);
-      }
-    }
-    &._active {
-      svg {
-        transform: rotate(-45deg);
       }
     }
   }
