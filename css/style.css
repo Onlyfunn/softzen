@@ -1432,6 +1432,7 @@ div[class*=__container] {
 }
 .examples__button {
   margin-top: 60px;
+  line-height: 100%;
 }
 @media (min-width: 1024px) {
   .examples__button:hover {
@@ -1456,10 +1457,10 @@ div[class*=__container] {
 }
 @media (max-width: 607px) {
   .examples__button {
-    font-size: 9px;
+    font-size: 10px;
     margin-top: 20px;
-    height: 34px;
-    border-radius: 16px;
+    height: 36px;
+    border-radius: 18px;
   }
 }
 .examples__button:nth-child(1)._grey {
