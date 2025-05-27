@@ -55,15 +55,27 @@ function slideToggle(element, duration = 400) {
   element.addEventListener("transitionend", handleTransitionEnd);
 }
 
-const spoilers = document.querySelectorAll(".spoiler-title");
-if (spoilers) {
-  spoilers.forEach((item) => {
-    item.addEventListener("click", function (e) {
-      slideToggle(item.nextElementSibling, 300);
-      item.children[1].classList.toggle("_active");
-    });
-  });
-}
+const spoilersBody = document.querySelector(".questions__spoilers");
+const spoilers = document.querySelectorAll(".questions__spoiler");
+
+window.addEventListener("click", function (e) {
+  if (spoilersBody && spoilers) {
+    if (e.target.closest(".questions__spoiler")) {
+      spoilers.forEach((item) => {
+        if (item.children[1].style.display == "block") {
+          slideToggle(item.children[1], 300);
+        }
+      });
+      slideToggle(e.target.closest(".questions__spoiler").children[1], 300);
+    } else {
+      spoilers.forEach((item) => {
+        if (item.children[1].style.display == "block") {
+          slideToggle(item.children[1], 300);
+        }
+      });
+    }
+  }
+});
 
 /*======================================================
 ======================MAIN SLIDER=======================
