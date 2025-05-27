@@ -94,8 +94,6 @@ const examplesSlider = new Swiper(".examples__swiper", {
   loop: false,
 
   direction: "horizontal",
-  slidesPerView: 2,
-  spaceBetween: 14,
   speed: 500,
   autoplay: {
     delay: 1000,
@@ -128,14 +126,19 @@ const examplesSlider = new Swiper(".examples__swiper", {
   },
 
   breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 14,
+    },
     420: {
       slidesPerView: 2.5,
     },
     608: {
-      slidesPerView: 3,
       spaceBetween: 18,
+      slidesPerView: 3,
     },
     800: {
+      slidesPerView: 3,
       spaceBetween: 21,
     },
   },
