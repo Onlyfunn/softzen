@@ -2369,6 +2369,7 @@ div[class*="__container"] {
     border-radius: 10px;
     max-width: 260px;
     margin: auto;
+    border: 1px solid var(--article-block-stroke-color);
   }
 
   @media (min-width: 1024px) {
