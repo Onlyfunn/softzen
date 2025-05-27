@@ -18,6 +18,22 @@
 ============ПЕРЕМЕННЫЕ ЦВЕТА============================
 ======================================================*/
 
+.empty {
+  height: 130px;
+  @media (max-width: 1231px) {
+    height: 100px;
+  }
+  @media (max-width: 1023px) {
+    height: 80px;
+  }
+  @media (max-width: 799px) {
+    height: 60px;
+  }
+  @media (max-width: 607px) {
+    height: 40px;
+  }
+}
+
 body.light-theme {
   --text-color: #202028;
   --bg-color-main: #fff;
@@ -1631,7 +1647,7 @@ div[class*="__container"] {
     @media (max-width: 799px) {
       border-radius: 10px;
       padding: 25px 30px;
-      gap: 40px;
+      gap: 30px;
     }
     @media (max-width: 607px) {
       border-radius: 10px;
@@ -1653,7 +1669,7 @@ div[class*="__container"] {
       flex: 0 1 370px;
     }
     @media (max-width: 799px) {
-      flex: 0 1 230px;
+      flex: 0 1 248px;
     }
     @media (max-width: 607px) {
       flex: 0 1 0;
@@ -1673,10 +1689,10 @@ div[class*="__container"] {
       font-size: 28px;
     }
     @media (max-width: 799px) {
-      font-size: 20px;
+      font-size: 22px;
     }
     @media (max-width: 607px) {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -1722,10 +1738,10 @@ div[class*="__container"] {
       font-size: 14px;
     }
     @media (max-width: 799px) {
-      font-size: 12px;
+      font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
 
@@ -1741,10 +1757,10 @@ div[class*="__container"] {
       font-size: 14px;
     }
     @media (max-width: 799px) {
-      font-size: 12px;
+      font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
 }
@@ -1779,10 +1795,10 @@ div[class*="__container"] {
   @media (max-width: 799px) {
     border-radius: 8px;
     padding: 5px 10px;
-    height: 44px;
+    height: 48px;
   }
   @media (max-width: 607px) {
-    height: 40px;
+    height: 46px;
     width: fit-content;
   }
 
@@ -1806,10 +1822,10 @@ div[class*="__container"] {
       font-size: 16px;
     }
     @media (max-width: 799px) {
-      font-size: 11px;
+      font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
@@ -1823,12 +1839,12 @@ div[class*="__container"] {
       font-size: 13px;
     }
     @media (max-width: 1023px) {
-      font-size: 10px;
     }
     @media (max-width: 799px) {
+      font-size: 11px;
     }
     @media (max-width: 607px) {
-      font-size: 9px;
+      font-size: 10px;
     }
   }
 }

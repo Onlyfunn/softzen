@@ -13,6 +13,30 @@
 /*======================================================
 ============ПЕРЕМЕННЫЕ ЦВЕТА============================
 ======================================================*/
+.empty {
+  height: 130px;
+}
+@media (max-width: 1231px) {
+  .empty {
+    height: 100px;
+  }
+}
+@media (max-width: 1023px) {
+  .empty {
+    height: 80px;
+  }
+}
+@media (max-width: 799px) {
+  .empty {
+    height: 60px;
+  }
+}
+@media (max-width: 607px) {
+  .empty {
+    height: 40px;
+  }
+}
+
 body.light-theme {
   --text-color: #202028;
   --bg-color-main: #fff;
@@ -1829,7 +1853,7 @@ div[class*=__container] {
   .prices__body {
     border-radius: 10px;
     padding: 25px 30px;
-    gap: 40px;
+    gap: 30px;
   }
 }
 @media (max-width: 607px) {
@@ -1858,7 +1882,7 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .prices__left {
-    flex: 0 1 230px;
+    flex: 0 1 248px;
   }
 }
 @media (max-width: 607px) {
@@ -1885,12 +1909,12 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .prices__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media (max-width: 607px) {
   .prices__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .prices__right {
@@ -1946,12 +1970,12 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .prices__name {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media (max-width: 607px) {
   .prices__name {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 .prices__price {
@@ -1972,12 +1996,12 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .prices__price {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media (max-width: 607px) {
   .prices__price {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -2019,12 +2043,12 @@ div[class*=__container] {
   .credit-prices {
     border-radius: 8px;
     padding: 5px 10px;
-    height: 44px;
+    height: 48px;
   }
 }
 @media (max-width: 607px) {
   .credit-prices {
-    height: 40px;
+    height: 46px;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -2054,12 +2078,12 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .credit-prices__title {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 @media (max-width: 607px) {
   .credit-prices__title {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .credit-prices__text {
@@ -2074,14 +2098,14 @@ div[class*=__container] {
     font-size: 13px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 799px) {
   .credit-prices__text {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 @media (max-width: 607px) {
   .credit-prices__text {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
