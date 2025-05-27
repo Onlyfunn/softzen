@@ -2629,11 +2629,6 @@ div[class*=__container] {
     font-size: 12px;
   }
 }
-@media (max-width: 607px) {
-  .articles__watch-all {
-    font-size: 10px;
-  }
-}
 .articles__watch-all svg {
   margin-left: 10px;
   height: 16px;
@@ -2658,13 +2653,6 @@ div[class*=__container] {
     width: 5px;
     height: 10px;
     margin-left: 4px;
-  }
-}
-@media (max-width: 607px) {
-  .articles__watch-all svg {
-    width: 4px;
-    height: 8px;
-    margin-left: 2px;
   }
 }
 .articles__watch-all svg path {
