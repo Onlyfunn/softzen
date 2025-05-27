@@ -132,6 +132,7 @@ const examplesSlider = new Swiper(".examples__swiper", {
     },
     420: {
       slidesPerView: 2.5,
+      spaceBetween: 18,
     },
     608: {
       spaceBetween: 18,
