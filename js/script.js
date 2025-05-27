@@ -153,8 +153,24 @@ const reportsSlider = new Swiper(".reports__swiper", {
   loop: false,
   direction: "horizontal",
   freeMode: true,
-  slidesPerView: 2.62,
-  spaceBetween: 21,
+  slidesPerView: "auto",
+  breakpoints: {
+    0: {
+      spaceBetween: 12,
+    },
+    608: {
+      spaceBetween: 14,
+    },
+    800: {
+      spaceBetween: 16,
+    },
+    1024: {
+      spaceBetween: 18,
+    },
+    1232: {
+      spaceBetween: 21,
+    },
+  },
 });
 
 /*======================================================
