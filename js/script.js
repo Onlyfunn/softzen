@@ -1,4 +1,6 @@
-new WOW().init();
+if (typeof WOW === "function") {
+  new WOW().init();
+}
 
 /*======================================================
 ======================SPOILERS==========================
@@ -87,113 +89,115 @@ window.addEventListener("click", function (e) {
   }
 });
 
-/*======================================================
+if (typeof Swiper === "function") {
+  /*======================================================
 ======================MAIN SLIDER=======================
 ======================================================*/
 
-const mainSlider = new Swiper(".main-info__swiper", {
-  loop: true,
-  direction: "horizontal",
-  speed: 500,
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-  autoplay: {
-    delay: 3000,
-  },
-  pagination: {
-    el: ".main-info__swiper-pagination",
-    clickable: true,
-  },
-});
+  const mainSlider = new Swiper(".main-info__swiper", {
+    loop: true,
+    direction: "horizontal",
+    speed: 500,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".main-info__swiper-pagination",
+      clickable: true,
+    },
+  });
 
-/*======================================================
+  /*======================================================
 ======================EXAMPLES SLIDER==================
 ======================================================*/
 
-const examplesSlider = new Swiper(".examples__swiper", {
-  loop: false,
+  const examplesSlider = new Swiper(".examples__swiper", {
+    loop: false,
 
-  direction: "horizontal",
-  speed: 500,
-  autoplay: {
-    delay: 1000,
-    disableOnInteraction: true,
-    reverseDirection: false,
-  },
-  pagination: {
-    el: ".examples__swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    prevEl: ".examples__swiper-button-prev",
-    nextEl: ".examples__swiper-button-next",
-  },
-  //AUTOPLAY REVERSE
-  on: {
-    init: function () {
-      this.autoplayReverse = false;
+    direction: "horizontal",
+    speed: 500,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: true,
+      reverseDirection: false,
     },
-    reachEnd: function () {
-      this.params.autoplay.reverseDirection = true;
-      this.autoplay.start();
-      this.autoplayReverse = true;
+    pagination: {
+      el: ".examples__swiper-pagination",
+      clickable: true,
     },
-    reachBeginning: function () {
-      this.params.autoplay.reverseDirection = false;
-      this.autoplay.start();
-      this.autoplayReverse = false;
+    navigation: {
+      prevEl: ".examples__swiper-button-prev",
+      nextEl: ".examples__swiper-button-next",
     },
-  },
+    //AUTOPLAY REVERSE
+    on: {
+      init: function () {
+        this.autoplayReverse = false;
+      },
+      reachEnd: function () {
+        this.params.autoplay.reverseDirection = true;
+        this.autoplay.start();
+        this.autoplayReverse = true;
+      },
+      reachBeginning: function () {
+        this.params.autoplay.reverseDirection = false;
+        this.autoplay.start();
+        this.autoplayReverse = false;
+      },
+    },
 
-  breakpoints: {
-    0: {
-      slidesPerView: 2,
-      spaceBetween: 14,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 14,
+      },
+      420: {
+        slidesPerView: 2.5,
+        spaceBetween: 18,
+      },
+      608: {
+        spaceBetween: 18,
+        slidesPerView: 3,
+      },
+      800: {
+        slidesPerView: 3,
+        spaceBetween: 21,
+      },
     },
-    420: {
-      slidesPerView: 2.5,
-      spaceBetween: 18,
-    },
-    608: {
-      spaceBetween: 18,
-      slidesPerView: 3,
-    },
-    800: {
-      slidesPerView: 3,
-      spaceBetween: 21,
-    },
-  },
-});
+  });
 
-/*======================================================
+  /*======================================================
 ======================REPORTS SLIDER====================
 ======================================================*/
 
-const reportsSlider = new Swiper(".reports__swiper", {
-  loop: false,
-  direction: "horizontal",
-  freeMode: true,
-  slidesPerView: "auto",
-  breakpoints: {
-    0: {
-      spaceBetween: 12,
+  const reportsSlider = new Swiper(".reports__swiper", {
+    loop: false,
+    direction: "horizontal",
+    freeMode: true,
+    slidesPerView: "auto",
+    breakpoints: {
+      0: {
+        spaceBetween: 12,
+      },
+      608: {
+        spaceBetween: 14,
+      },
+      800: {
+        spaceBetween: 16,
+      },
+      1024: {
+        spaceBetween: 18,
+      },
+      1232: {
+        spaceBetween: 21,
+      },
     },
-    608: {
-      spaceBetween: 14,
-    },
-    800: {
-      spaceBetween: 16,
-    },
-    1024: {
-      spaceBetween: 18,
-    },
-    1232: {
-      spaceBetween: 21,
-    },
-  },
-});
+  });
+}
 
 /*======================================================
 ======================CHANGE THEME======================
@@ -248,6 +252,73 @@ if (mainText && mainSliderObject) {
       }px`;
     } else {
       mainText.style.marginBottom = `0px`;
+    }
+  });
+}
+
+/*======================================================
+====================NUMBER MASK=========================
+======================================================*/
+
+const phoneInput = document.getElementById("article-form-number");
+if (phoneInput) {
+  phoneInput.addEventListener("input", function (e) {
+    // Оставляем только цифры и плюс
+    let value = this.value.replace(/[^\d+]/g, "");
+
+    // Удаляем лишние плюсы (оставляем только первый)
+    value = value.replace(/^\+/, "").replace(/\+/g, "");
+    value = "+" + value;
+
+    // Ограничиваем длину (+7 + 10 цифр)
+    if (value.length > 12) {
+      value = value.substring(0, 12);
+    }
+
+    // Форматируем номер
+    let formatted = value.substring(0, 2); // +7
+
+    if (value.length > 2) {
+      formatted += "-" + value.substring(2, 5); // первые 3 цифры
+    }
+    if (value.length > 5) {
+      formatted += "-" + value.substring(5, 8); // следующие 3
+    }
+    if (value.length > 8) {
+      formatted += "-" + value.substring(8, 10); // затем 2
+    }
+    if (value.length > 10) {
+      formatted += "-" + value.substring(10, 12); // последние 2
+    }
+
+    this.value = formatted;
+  });
+
+  // Запрещаем ввод неразрешенных символов
+  phoneInput.addEventListener("keydown", function (e) {
+    // Разрешаем: цифры, +, Backspace, Delete, стрелки
+    if (
+      !/[\d+]/.test(e.key) &&
+      !["Backspace", "Delete", "ArrowLeft", "ArrowRight"].includes(e.key)
+    ) {
+      e.preventDefault();
+    }
+
+    // Запрещаем удаление "+7"
+    if (this.selectionStart <= 2 && e.key === "Backspace") {
+      e.preventDefault();
+    }
+
+    // Запрещаем ввод плюса не в начале
+    if (e.key === "+" && this.selectionStart > 0) {
+      e.preventDefault();
+    }
+  });
+
+  // Автоматически добавляем "+7-" при фокусе, если поле пустое
+  phoneInput.addEventListener("focus", function () {
+    if (!this.value.startsWith("+7")) {
+      this.value = "+7-";
     }
   });
 }
