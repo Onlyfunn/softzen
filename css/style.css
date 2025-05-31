@@ -887,7 +887,6 @@ div[class*=__container] {
 ======================================================*/
 .steps {
   padding: 130px 0;
-  overflow-x: hidden;
 }
 @media (max-width: 1231px) {
   .steps {
@@ -993,6 +992,7 @@ div[class*=__container] {
   }
 }
 .block-step {
+  overflow: hidden;
   padding: 40px 58px;
   border-radius: 20px 0px 0px 20px;
   background-color: var(--step-color);
@@ -1005,12 +1005,13 @@ div[class*=__container] {
   .block-step {
     padding: 30px 40px;
     min-height: 0px;
+    width: calc(50vw + 55px);
   }
 }
 @media (max-width: 1023px) {
   .block-step {
     padding: 20px 30px;
-    width: calc(50vw + 130px);
+    width: calc(50vw + 24px);
   }
 }
 @media (max-width: 799px) {
@@ -1028,7 +1029,6 @@ div[class*=__container] {
 .block-step:not(:nth-child(2)) .block-step__image {
   top: 51%;
   transform: translateY(-50%);
-  right: 0;
 }
 @media (max-width: 1231px) {
   .block-step:not(:nth-child(2)) .block-step__image {
@@ -1056,22 +1056,21 @@ div[class*=__container] {
 }
 @media (max-width: 1231px) {
   .block-step:last-child .block-step__image {
-    right: 50px;
+    right: 15px;
   }
 }
 @media (max-width: 1023px) {
   .block-step:last-child .block-step__image {
-    right: 65px;
+    right: -20px;
   }
 }
 @media (max-width: 799px) {
   .block-step:last-child .block-step__image {
-    right: 20px;
+    right: 15px;
   }
 }
 .block-step:nth-child(2) .block-step__image {
   bottom: 0;
-  right: 0;
 }
 @media (max-width: 1231px) {
   .block-step:nth-child(2) .block-step__image {
@@ -1174,8 +1173,23 @@ div[class*=__container] {
 }
 .block-step__image {
   position: absolute;
+  right: 0;
 }
-
+@media (max-width: 1231px) {
+  .block-step__image {
+    right: -30px;
+  }
+}
+@media (max-width: 1023px) {
+  .block-step__image {
+    right: -75px;
+  }
+}
+@media (max-width: 799px) {
+  .block-step__image {
+    right: 0;
+  }
+}
 /*======================================================
 =====================EXAMPLES===========================
 ======================================================*/

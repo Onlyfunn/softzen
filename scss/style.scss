@@ -803,7 +803,6 @@ div[class*="__container"] {
 
 .steps {
   padding: 130px 0;
-  overflow-x: hidden;
   @media (max-width: 1231px) {
     padding: 100px 0;
   }
@@ -895,6 +894,7 @@ div[class*="__container"] {
 }
 
 .block-step {
+  overflow: hidden;
   padding: 40px 58px;
   border-radius: 20px 0px 0px 20px;
   background-color: var(--step-color);
@@ -905,10 +905,11 @@ div[class*="__container"] {
   @media (max-width: 1231px) {
     padding: 30px 40px;
     min-height: 0px;
+    width: calc(50vw + 55px);
   }
   @media (max-width: 1023px) {
     padding: 20px 30px;
-    width: calc(50vw + 130px);
+    width: calc(50vw + 24px);
   }
   @media (max-width: 799px) {
     padding: 20px;
@@ -923,7 +924,6 @@ div[class*="__container"] {
     .block-step__image {
       top: 51%;
       transform: translateY(-50%);
-      right: 0;
       @media (max-width: 1231px) {
         transform: translateY(-50%) scale(0.8);
       }
@@ -943,13 +943,13 @@ div[class*="__container"] {
     .block-step__image {
       right: 35.76px;
       @media (max-width: 1231px) {
-        right: 50px;
+        right: 15px;
       }
       @media (max-width: 1023px) {
-        right: 65px;
+        right: -20px;
       }
       @media (max-width: 799px) {
-        right: 20px;
+        right: 15px;
       }
       @media (max-width: 607px) {
       }
@@ -958,7 +958,6 @@ div[class*="__container"] {
   &:nth-child(2) {
     .block-step__image {
       bottom: 0;
-      right: 0;
       @media (max-width: 1231px) {
         transform: scale(0.8);
         bottom: -37px;
@@ -1043,6 +1042,18 @@ div[class*="__container"] {
 
   &__image {
     position: absolute;
+    right: 0;
+    @media (max-width: 1231px) {
+      right: -30px;
+    }
+    @media (max-width: 1023px) {
+      right: -75px;
+    }
+    @media (max-width: 799px) {
+      right: 0;
+    }
+    @media (max-width: 607px) {
+    }
   }
 }
 
