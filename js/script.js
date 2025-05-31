@@ -1,3 +1,17 @@
+/*======================================================
+=========================WOW============================
+======================================================*/
+
+Fancybox.bind("[data-fancybox]", {
+  openAnimation: {
+    duration: 1000, // Длительность открытия в миллисекундах (по умолчанию 366)
+    easing: "ease", // Функция плавности
+  },
+  closeAnimation: {
+    duration: 100, // Длительность закрытия в миллисекундах (по умолчанию 333)
+    easing: "ease", // Функция плавности
+  },
+});
 if (typeof WOW === "function") {
   new WOW().init();
 }
@@ -259,66 +273,3 @@ if (mainText && mainSliderObject) {
 /*======================================================
 ====================NUMBER MASK=========================
 ======================================================*/
-
-const phoneInput = document.getElementById("article-form-number");
-if (phoneInput) {
-  phoneInput.addEventListener("input", function (e) {
-    // Оставляем только цифры и плюс
-    let value = this.value.replace(/[^\d+]/g, "");
-
-    // Удаляем лишние плюсы (оставляем только первый)
-    value = value.replace(/^\+/, "").replace(/\+/g, "");
-    value = "+" + value;
-
-    // Ограничиваем длину (+7 + 10 цифр)
-    if (value.length > 12) {
-      value = value.substring(0, 12);
-    }
-
-    // Форматируем номер
-    let formatted = value.substring(0, 2); // +7
-
-    if (value.length > 2) {
-      formatted += "-" + value.substring(2, 5); // первые 3 цифры
-    }
-    if (value.length > 5) {
-      formatted += "-" + value.substring(5, 8); // следующие 3
-    }
-    if (value.length > 8) {
-      formatted += "-" + value.substring(8, 10); // затем 2
-    }
-    if (value.length > 10) {
-      formatted += "-" + value.substring(10, 12); // последние 2
-    }
-
-    this.value = formatted;
-  });
-
-  // Запрещаем ввод неразрешенных символов
-  phoneInput.addEventListener("keydown", function (e) {
-    // Разрешаем: цифры, +, Backspace, Delete, стрелки
-    if (
-      !/[\d+]/.test(e.key) &&
-      !["Backspace", "Delete", "ArrowLeft", "ArrowRight"].includes(e.key)
-    ) {
-      e.preventDefault();
-    }
-
-    // Запрещаем удаление "+7"
-    if (this.selectionStart <= 2 && e.key === "Backspace") {
-      e.preventDefault();
-    }
-
-    // Запрещаем ввод плюса не в начале
-    if (e.key === "+" && this.selectionStart > 0) {
-      e.preventDefault();
-    }
-  });
-
-  // Автоматически добавляем "+7-" при фокусе, если поле пустое
-  phoneInput.addEventListener("focus", function () {
-    if (!this.value.startsWith("+7")) {
-      this.value = "+7-";
-    }
-  });
-}

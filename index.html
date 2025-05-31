@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       as="style"
@@ -47,62 +51,6 @@
     <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
     <title>Document</title>
   </head>
-  <!-- Повторяющиеся элементы <a href="#" class="button"
-          >Узнать стоимость
-          <svg
-            class="button__arrow"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 12.5H19"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M12 5.5L19 12.5L12 19.5"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
-        <h1 class="title">
-          Разработка сайтов и продвижение бизнеса в интернете под ключ!
-        </h1>
-        <a href="#" class="button-2"
-          >Подробнее
-          <svg
-            class="button-2__arrow"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 12.5H19"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M12 5.5L19 12.5L12 19.5"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
-     -->
   <body class="light-theme">
     <div class="wrapper">
       <header class="header"></header>
@@ -183,8 +131,12 @@
                 class="main-info__contact contact-info wow animate__animated animate__fadeInLeft"
                 data-wow-delay="0.2s"
               >
-                <a href="#" class="button contact-info__button"
-                  >Узнать стоимость
+                <button
+                  data-fancybox
+                  data-src="#form-popup"
+                  class="button contact-info__button"
+                >
+                  Узнать стоимость
                   <svg
                     class="button__arrow"
                     width="24"
@@ -208,7 +160,8 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </a>
+                </button>
+
                 <div class="contact-info__text">
                   <p class="contact-info__text-title">
                     Напишите нам, мы онлайн!
@@ -514,9 +467,13 @@
                   15 минут разговора — и вы поймете, как увеличить прибыль в 2
                   раза. Или мы вернем вам эти 15 минут деньгами
                 </p>
-                <a href="#" class="block-services__button button">
+                <button
+                  data-fancybox
+                  data-src="#form-popup"
+                  class="block-services__button button"
+                >
                   Обсудить проект
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -763,7 +720,13 @@
             <div class="swiper-button-next examples__swiper-button-next"></div>
 
             <div class="examples__buttons">
-              <a href="#" class="examples__button button">Обсудить проект</a>
+              <button
+                data-fancybox
+                data-src="#form-popup"
+                class="examples__button button"
+              >
+                Обсудить проект
+              </button>
               <a href="#" class="examples__button button"
                 >Смотреть все кейсы
                 <svg
@@ -1679,10 +1642,72 @@
         </section>
       </main>
       <footer class="footer"></footer>
+      <!--POPUPS-->
+      <form
+        id="form-popup"
+        action="#"
+        class="right-article__form form-article popup"
+        style="display: flex"
+      >
+        <label for="article-form-name" class="form-article__label --required"
+          >Ваше имя</label
+        >
+        <input
+          type="text"
+          class="form-article__input"
+          placeholder="Введите имя"
+          id="article-form-name"
+          required
+        />
+        <label for="article-form-number" class="form-article__label --required"
+          >Ваш номер телефона</label
+        >
+        <div class="form-article__input-body">
+          <input
+            type="tel"
+            autocomplete="tel"
+            class="form-article__input"
+            value="+7"
+            id="article-form-number"
+            required
+          />
+          <img src="img/icons/flag.svg" alt="flag" />
+        </div>
+
+        <label for="article-form-contact" class="form-article__label --required"
+          >Ваш контакт (Telegram или WhatsApp)</label
+        >
+        <input
+          type="text"
+          class="form-article__input"
+          placeholder="@username или номер WhatsApp"
+          id="article-form-contact"
+          required
+        />
+        <label for="article-form-question" class="form-article__label"
+          >Сообщение (необязательно)</label
+        >
+        <textarea
+          id="article-form-question"
+          class="form-article__input --area"
+          placeholder="Задайте вопрос"
+        ></textarea>
+        <div class="form-article__footer">
+          <button type="submit" class="form-article__button button">
+            Отправить
+          </button>
+          <p class="form-article__agree">
+            Вы даете согласие на обработку своих персональных данных -
+            <a href="#">пользовательское соглашение.</a>
+          </p>
+        </div>
+      </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/imasked.js"></script>
   </body>
 </html>
