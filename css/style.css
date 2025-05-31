@@ -1873,6 +1873,9 @@ div[class*=__container] {
 .prices {
   overflow-x: hidden;
 }
+.prices__container {
+  overflow-x: hidden;
+}
 .prices__body {
   border-radius: 30px;
   background-color: var(--bg-color-2);

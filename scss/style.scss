@@ -1677,6 +1677,7 @@ div[class*="__container"] {
 .prices {
   overflow-x: hidden;
   &__container {
+    overflow-x: hidden;
   }
 
   &__body {
