@@ -99,16 +99,16 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 27px;
   @media (max-width: 1231px) {
-    font-size: 22px;
+    font-size: 24px;
   }
   @media (max-width: 1023px) {
-    font-size: 18px;
+    font-size: 20px;
   }
   @media (max-width: 799px) {
-    font-size: 16px;
+    font-size: 18px;
   }
   @media (max-width: 607px) {
-    font-size: 14px;
+    font-size: 16px;
   }
   font-weight: 500;
   line-height: 135%;
@@ -165,17 +165,14 @@ div[class*="__container"] {
   @media (max-width: 1231px) {
     height: 55px;
     padding: 0 20px;
-    font-size: 15px;
+    font-size: 16px;
   }
   @media (max-width: 1023px) {
     height: 45px;
     padding: 0 15px;
-    font-size: 13px;
+    font-size: 14px;
   }
   @media (max-width: 607px) {
-    font-size: 12px;
-    height: 44px;
-    border-radius: 20px;
   }
   &__arrow {
     min-width: 24px;
@@ -218,16 +215,16 @@ div[class*="__container"] {
   color: var(--title-color);
   line-height: 120%;
   @media (max-width: 1231px) {
-    font-size: 36px;
+    font-size: 42px;
   }
   @media (max-width: 1023px) {
-    font-size: 28px;
+    font-size: 36px;
   }
   @media (max-width: 799px) {
-    font-size: 22px;
+    font-size: 28px;
   }
   @media (max-width: 607px) {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
@@ -243,12 +240,12 @@ div[class*="__container"] {
     font-size: 16px;
   }
   @media (max-width: 1023px) {
-    font-size: 13px;
+    font-size: 14px;
   }
   @media (max-width: 799px) {
   }
   @media (max-width: 607px) {
-    font-size: 11px;
+    font-size: 13px;
   }
   &__arrow {
     width: 24px;
@@ -290,12 +287,12 @@ div[class*="__container"] {
     font-size: 16px;
   }
   @media (max-width: 1023px) {
-    font-size: 13px;
+    font-size: 14px;
   }
   @media (max-width: 799px) {
   }
   @media (max-width: 607px) {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 
@@ -373,15 +370,15 @@ div[class*="__container"] {
     font-size: 20px;
     line-height: 135%;
     @media (max-width: 1231px) {
-      font-size: 16px;
+      font-size: 18px;
     }
     @media (max-width: 1023px) {
-      font-size: 14px;
+      font-size: 16px;
     }
     @media (max-width: 799px) {
+      font-size: 14px;
     }
     @media (max-width: 607px) {
-      font-size: 12.32px;
     }
   }
 
@@ -404,24 +401,25 @@ div[class*="__container"] {
     @media (max-width: 799px) {
       height: 435px;
       width: 660px;
-      top: 135px;
+      top: 180px;
       right: 0;
       left: 0;
     }
     @media (max-width: 607px) {
       height: 105vw;
       width: 158vw;
-      top: 110px;
+      top: 120px;
       max-height: 435px;
       max-width: 660px;
       left: -28vw;
       right: -28vw;
     }
-    @media (max-width: 445px) {
-      top: 150px;
-    }
-    @media (max-width: 370px) {
+    @media (max-width: 537px) {
       top: 170px;
+    }
+
+    @media (max-width: 370px) {
+      top: 200px;
     }
   }
 
@@ -688,7 +686,7 @@ div[class*="__container"] {
     border-radius: 10px;
     padding: 15px;
     min-height: 0px;
-    min-width: 200px;
+    min-width: 220px;
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -763,6 +761,7 @@ div[class*="__container"] {
   &__text {
     margin-bottom: auto;
     font-weight: 500;
+    padding-bottom: 10px;
   }
 
   &__button {
@@ -791,7 +790,7 @@ div[class*="__container"] {
       @media (max-width: 607px) {
         min-width: 130px;
         margin-top: 5px;
-        font-size: 10px;
+        font-size: 12px;
         height: 35px;
       }
     }
@@ -856,6 +855,8 @@ div[class*="__container"] {
       flex: 1 0 330px;
     }
     @media (max-width: 799px) {
+      position: relative;
+      margin-bottom: 10px;
       gap: 5px;
       flex: 1 0 0;
     }
@@ -999,7 +1000,7 @@ div[class*="__container"] {
       margin-bottom: 10px;
     }
     @media (max-width: 607px) {
-      font-size: 20px;
+      font-size: 23px;
     }
   }
 
@@ -1311,7 +1312,7 @@ div[class*="__container"] {
       margin-top: 30px;
     }
     @media (max-width: 607px) {
-      font-size: 10px;
+      font-size: 12px;
       margin-top: 20px;
       height: 36px;
       border-radius: 18px;
@@ -1443,7 +1444,7 @@ div[class*="__container"] {
       font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 }
@@ -1771,7 +1772,6 @@ div[class*="__container"] {
       font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 11px;
     }
   }
 
@@ -1790,7 +1790,6 @@ div[class*="__container"] {
       font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 11px;
     }
   }
 }
@@ -2055,7 +2054,6 @@ div[class*="__container"] {
       font-size: 13px;
     }
     @media (max-width: 607px) {
-      font-size: 12px;
     }
   }
 
@@ -2167,7 +2165,7 @@ div[class*="__container"] {
       font-size: 16px;
     }
     @media (max-width: 607px) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 
@@ -2482,7 +2480,6 @@ div[class*="__container"] {
       margin-bottom: 15px;
     }
     @media (max-width: 607px) {
-      font-size: 14px;
       margin-bottom: 10px;
     }
   }
@@ -2516,18 +2513,17 @@ div[class*="__container"] {
     color: var(--title-color);
     margin-bottom: 20px;
     @media (max-width: 1231px) {
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 15px;
     }
     @media (max-width: 1023px) {
-      font-size: 18px;
+      font-size: 22px;
       margin-bottom: 10px;
     }
     @media (max-width: 799px) {
-      font-size: 16px;
+      font-size: 18px;
     }
     @media (max-width: 607px) {
-      font-size: 14px;
     }
   }
 
