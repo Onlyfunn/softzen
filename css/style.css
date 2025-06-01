@@ -171,6 +171,7 @@ div[class*=__container] {
 .button {
   display: inline-flex;
   align-items: center;
+  text-align: start;
   justify-content: center;
   height: 65px;
   padding: 0 35px;
