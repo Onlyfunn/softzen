@@ -2334,11 +2334,11 @@ div[class*="__container"] {
     &::-webkit-scrollbar {
       display: none;
     }
-    gap: 21px;
     margin-bottom: 60px;
+    gap: 21px;
     @media (max-width: 1231px) {
-      gap: 18px;
       margin-bottom: 50px;
+      gap: 18px;
     }
     @media (max-width: 1023px) {
     }
@@ -2356,7 +2356,7 @@ div[class*="__container"] {
 }
 
 .block-articles {
-  flex: 1 0 33.33%;
+  flex: 1 0 calc(33.33% - 21px);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -2372,7 +2372,7 @@ div[class*="__container"] {
   @media (max-width: 1023px) {
   }
   @media (max-width: 799px) {
-    flex: 1 0 50%;
+    flex: 1 0 calc(50% - 18px);
   }
   @media (max-width: 607px) {
     border-radius: 10px;

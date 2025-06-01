@@ -2602,20 +2602,20 @@ div[class*=__container] {
   display: flex;
   overflow-x: auto;
   scrollbar-color: transparent;
-  gap: 21px;
   margin-bottom: 60px;
+  gap: 21px;
 }
 .articles__blocks::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 1231px) {
   .articles__blocks {
-    gap: 18px;
     margin-bottom: 50px;
+    gap: 18px;
   }
 }
 .block-articles {
-  flex: 1 0 33.33%;
+  flex: 1 0 calc(33.33% - 21px);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -2632,7 +2632,7 @@ div[class*=__container] {
 }
 @media (max-width: 799px) {
   .block-articles {
-    flex: 1 0 50%;
+    flex: 1 0 calc(50% - 18px);
   }
 }
 @media (max-width: 607px) {
